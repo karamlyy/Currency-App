@@ -54,8 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Converted Amount"
+        android:layout_marginTop="5dp"
 
+        android:text="Converted Amount"
         android:textAppearance="@style/check_live_"
         app:layout_constraintStart_toStartOf="@+id/group_6"
         app:layout_constraintTop_toBottomOf="@+id/convertButton" />
@@ -113,5 +114,63 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/convertedAmountText"
         app:layout_constraintTop_toBottomOf="@+id/enteredAmount" />
+
+    <Spinner
+        android:id="@+id/fromAmountSpinner"
+        android:layout_width="97dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toEndOf="@+id/fromAmountImageView"
+        app:layout_constraintTop_toTopOf="@+id/group_6" />
+
+    <Spinner
+        android:id="@+id/toAmountSpinner"
+        android:layout_width="94dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/group_6"
+        app:layout_constraintStart_toEndOf="@+id/toAmountImageView" />
+
+    <ImageView
+        android:id="@+id/fromAmountImageView"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/group_6"
+        app:layout_constraintTop_toTopOf="@+id/group_6"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/toAmountImageView"
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/group_6"
+        app:layout_constraintStart_toStartOf="@+id/group_6"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/exchangeRateHintText"
+        android:layout_width="195dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="Indicative Exchange Rate"
+        app:layout_constraintStart_toStartOf="@+id/group_6"
+        app:layout_constraintTop_toBottomOf="@+id/group_6" />
+
+    <TextView
+        android:id="@+id/exchangeRateText"
+        android:layout_width="195dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="1 SGD = 0.7367 USD"
+        app:layout_constraintStart_toStartOf="@+id/exchangeRateHintText"
+        app:layout_constraintTop_toBottomOf="@+id/exchangeRateHintText" />
     />
 </androidx.constraintlayout.widget.ConstraintLayout>
