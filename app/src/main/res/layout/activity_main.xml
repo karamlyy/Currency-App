@@ -119,39 +119,17 @@
         android:id="@+id/fromAmountSpinner"
         android:layout_width="97dp"
         android:layout_height="23dp"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="55dp"
-        app:layout_constraintStart_toEndOf="@+id/fromAmountImageView"
-        app:layout_constraintTop_toTopOf="@+id/group_6" />
+        app:layout_constraintTop_toTopOf="@+id/group_6"
+        tools:layout_editor_absoluteX="92dp" />
 
     <Spinner
         android:id="@+id/toAmountSpinner"
         android:layout_width="94dp"
         android:layout_height="19dp"
-        android:layout_marginStart="5dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/group_6"
-        app:layout_constraintStart_toEndOf="@+id/toAmountImageView" />
-
-    <ImageView
-        android:id="@+id/fromAmountImageView"
-        android:layout_width="37dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/group_6"
-        app:layout_constraintTop_toTopOf="@+id/group_6"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/toAmountImageView"
-        android:layout_width="36dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/group_6"
-        app:layout_constraintStart_toStartOf="@+id/group_6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        tools:layout_editor_absoluteX="91dp" />
 
     <TextView
         android:id="@+id/exchangeRateHintText"
