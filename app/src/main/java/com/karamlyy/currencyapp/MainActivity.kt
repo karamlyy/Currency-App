@@ -55,7 +55,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun getData(){
         //Api key : gZtI9xikDbj79Upk914b6A
-        //Url https://fcsapi.com/api-v3/forex/latest?symbol=${from}/${to}&access_key=gZtI9xikDbj79Upk914b6A
+        //Url https://fcsapi.com/
+        // api-v3/forex/latest?symbol=${currencyFromString}/${currencyToString}&access_key=gZtI9xikDbj79Upk914b6A
 
 
     }
