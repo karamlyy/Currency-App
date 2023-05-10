@@ -8,12 +8,8 @@ import android.widget.Toast
 import com.karamlyy.currencyapp.MainActivity
 import com.karamlyy.currencyapp.models.Currency
 
-class FromSpinnerListener(list : List<Currency>) : OnItemSelectedListener {
-    var list : List<Currency>
-    init {
-        this.list=list
-    }
-    override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, l: Long) {
+class FromSpinnerListener(var list : List<Currency>) : OnItemSelectedListener {
+      override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, l: Long) {
         MainActivity.currencyFromString=list.get(position).name
     }
 
