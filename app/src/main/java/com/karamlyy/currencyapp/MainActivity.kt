@@ -91,13 +91,15 @@ class MainActivity : AppCompatActivity() {
                         val converted = rate * amount
 
                         runOnUiThread {
+
                             exchangeRateText.text = "1 ${currencyFromString} = ${String. format("%.4f", rate)} ${currencyToString}"
                             convertedAmountView.text = String. format("%.3f", converted)
                         }
 
                     } catch (error:Throwable){
-                        Log.d("ERROR_LOG","${error.message}")
-                        Toast.makeText(this@MainActivity, error.message, Toast.LENGTH_LONG).show()
+                        if (currencyFromString == currencyToString){
+                           Toast.makeText(this@MainActivity, "same rate", Toast.LENGTH_LONG).show()
+                        }
                     }
                 }
             }
