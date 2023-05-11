@@ -14,15 +14,7 @@ data class FCSResponse(
 
 @Serializable
 data class ForexResponse(
-    val o: String,
-    val h: String,
-    val l: String,
-    val c: String,
-    val ch: String,
-    val cp: String,
-    val t: String,
-    val s: String,
-    val tm: String
+    val c: String
     )
 
 interface ApiService {
@@ -34,6 +26,8 @@ interface ApiService {
 }
 
 object RetrofitInstance {
+
+    //https://api.freecurrencyapi.com/v1/latest?apikey=1XnSbUmZKCZjhU6ULxSP6D9j94lC2g8iHoLNDpEo&currencies=EUR%2CUSD%2CCAD
     private const val BASE_URL = "https://fcsapi.com/"
 
     fun getRetrofitInstance(): Retrofit {

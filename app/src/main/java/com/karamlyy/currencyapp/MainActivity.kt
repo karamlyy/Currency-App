@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var exchangeRateText : TextView
     lateinit var enteredAmount: EditText
-    lateinit var convertButton: View
+    lateinit var convertButton: Button
     lateinit var convertedAmountView: TextView
     companion object{
         var currencyFromString : String = ""
@@ -68,14 +68,14 @@ class MainActivity : AppCompatActivity() {
         toSpinner.adapter=spinnerAdapter
         fromSpinner.onItemSelectedListener = FromSpinnerListener(list)
         toSpinner.onItemSelectedListener = ToSpinnerListener(list)
-        getData()
+
+        convertButton.setOnClickListener {
+            getData()
+        }
 
     }
 
     fun getData(){
-        //Api key : gZtI9xikDbj79Upk914b6A
-        //Url https://fcsapi.com/
-        // api-v3/forex/latest?symbol=${currencyFromString}/${currencyToString}&access_key=gZtI9xikDbj79Upk914b6A
         val apiKey = "gZtI9xikDbj79Upk914b6A"
 
         runBlocking {
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
                     } catch (error:Throwable){
                         if (currencyFromString == currencyToString){
-                           Toast.makeText(this@MainActivity, "same rate", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MainActivity, "same rate", Toast.LENGTH_LONG).show()
                         }
                     }
                 }
