@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
 
     <TextView
@@ -39,7 +41,9 @@
     <View
         android:id="@+id/group_6"
         android:layout_width="320dp"
-        android:layout_height="268dp"
+        android:layout_height="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
 
         android:layout_marginTop="32dp"
         android:background="@drawable/border"
@@ -85,18 +89,27 @@
         app:layout_constraintEnd_toEndOf="@+id/group_6"
         app:layout_constraintTop_toTopOf="@+id/group_6" />
 
+    <View
+        android:background="@drawable/button"
+        android:id="@+id/convertButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/group_6"
+        app:layout_constraintEnd_toEndOf="@+id/group_6"
+        app:layout_constraintStart_toStartOf="@+id/group_6"
+        app:layout_constraintTop_toTopOf="@+id/group_6" />
 
     <TextView
         android:id="@+id/convertedAmountView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="18dp"
         android:background="@drawable/input_border"
-        android:ems="6"
+        android:ems="5"
         android:inputType="number"
         android:paddingRight="5dp"
-        android:text=""
+        android:text="0.00"
         android:textAlignment="textEnd"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/group_6"
@@ -108,7 +121,7 @@
         android:id="@+id/fromAmountSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="55dp"
         app:layout_constraintStart_toStartOf="@+id/group_6"
         app:layout_constraintTop_toTopOf="@+id/group_6" />
@@ -117,8 +130,8 @@
         android:id="@+id/toAmountSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="@+id/group_6"
         app:layout_constraintStart_toStartOf="@+id/group_6" />
 
@@ -141,16 +154,19 @@
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/exchangeRateHintText"
         app:layout_constraintTop_toBottomOf="@+id/exchangeRateHintText" />
+
+    <TextView
+        android:id="@+id/vector"
+        android:text="convert"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/convertButton"
+        app:layout_constraintEnd_toEndOf="@+id/convertButton"
+        app:layout_constraintStart_toStartOf="@+id/convertButton"
+        app:layout_constraintTop_toTopOf="@+id/convertButton" />
     />
 
-    <Button
-        android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:text="convert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
