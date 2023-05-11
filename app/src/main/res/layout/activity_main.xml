@@ -44,6 +44,8 @@
         android:layout_height="270dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_height="268dp"
+
         android:layout_marginTop="32dp"
         android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,12 +58,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
 
+        android:layout_marginBottom="23dp"
         android:text="Converted Amount"
         android:textAppearance="@style/check_live_"
-        app:layout_constraintStart_toStartOf="@+id/group_6"
-        app:layout_constraintTop_toBottomOf="@+id/convertButton" />
+        app:layout_constraintBottom_toTopOf="@+id/toAmountSpinner"
+        app:layout_constraintStart_toStartOf="@+id/group_6" />
 
     <TextView
         android:id="@+id/amountText"
@@ -81,9 +83,9 @@
         android:layout_marginEnd="18dp"
         android:background="@drawable/input_border"
         android:ems="5"
+        android:hint="amount"
         android:inputType="number"
         android:paddingRight="5dp"
-        android:text="0.00"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="@+id/group_6"
         app:layout_constraintTop_toTopOf="@+id/group_6" />
@@ -131,6 +133,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/group_6"
         app:layout_constraintStart_toStartOf="@+id/group_6" />
 
@@ -166,4 +170,16 @@
         app:layout_constraintEnd_toEndOf="@+id/convertButton"
         app:layout_constraintStart_toStartOf="@+id/convertButton"
         app:layout_constraintTop_toTopOf="@+id/convertButton" />
+    />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
