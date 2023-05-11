@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var exchangeRateText : TextView
     lateinit var enteredAmount: EditText
-    lateinit var convertButton: Button
+    lateinit var convertButton: View
     lateinit var convertedAmountView: TextView
     companion object{
         var currencyFromString : String = ""
