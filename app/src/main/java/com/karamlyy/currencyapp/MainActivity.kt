@@ -68,14 +68,14 @@ class MainActivity : AppCompatActivity() {
         toSpinner.adapter=spinnerAdapter
         fromSpinner.onItemSelectedListener = FromSpinnerListener(list)
         toSpinner.onItemSelectedListener = ToSpinnerListener(list)
-
-        convertButton.setOnClickListener {
-            getData()
-        }
+        getData()
 
     }
 
     fun getData(){
+        //Api key : gZtI9xikDbj79Upk914b6A
+        //Url https://fcsapi.com/
+        // api-v3/forex/latest?symbol=${currencyFromString}/${currencyToString}&access_key=gZtI9xikDbj79Upk914b6A
         val apiKey = "gZtI9xikDbj79Upk914b6A"
 
         runBlocking {
